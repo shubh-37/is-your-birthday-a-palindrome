@@ -1,4 +1,6 @@
+var inputDate = document.querySelector(".input-date");
 var checkBtn = document.querySelector("#check-btn");
+var output = document.querySelector(".output");
 
 function reverseStr(str){
     var splitStr = str.split("");
@@ -131,6 +133,27 @@ function getNextPalindromeDate(date){
 }
 
 function clickHandler(){
+    var input = inputDate.value;
+    if(input){
+        var list = input.split("-");
+
+    var date = {
+        day : Number(list[2]),
+        month : Number(list[1]),
+        year : Number(list[0])
+    }
+
+    var isPalindrome = checkPalindromeInAllDateFormats(date);
+
+    if(isPalindrome){
+        output.innerText = "Yay! your birthday is a Palindrome🥳";
+    }else{
+        var [nextDay, counter] = getNextPalindromeDate(date);
+        output.innerText = `The next palindrome date is ${nextDay.day}-${nextDay.month}-${nextDay.year} and you missed it by ${counter} days 😔`;
+    }
+    }else{
+        output.innerText = "Please enter a date to check!!"
+    }
     
 }
 
