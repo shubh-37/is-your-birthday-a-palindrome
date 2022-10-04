@@ -8,6 +8,15 @@ function reverseStr(str){
     return reverseStr;
 }
 
+function isPalindrome(str){
+    var revStr = reverseStr(str);
+    if(str === revStr){
+        return true;
+    }else{
+        return false;
+    }
+}
+
 function clickHandler(){
 }
 
