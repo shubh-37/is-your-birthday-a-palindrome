@@ -52,11 +52,23 @@ function getAllDateFormats(date){
     return [ddmmyyyy, mmddyyyy, yyyymmdd, ddmmyy, mmddyy, yymmdd];
 }
 
+function checkPalindromeInAllDateFormats(date){
+    var listOfPalindromes = getAllDateFormats(date);
+    var flag = false
+    for (let i = 0; i < listOfPalindromes.length; i++){
+        if(isPalindrome(listOfPalindromes[i])){
+            flag = true;
+            break;
+        } 
+    }
+    console.log(flag);
+}
+
 function clickHandler(){
     var date = {
-        day: 23,
-        month: 12,
-        year: 2019
+        day: 2,
+        month: 11,
+        year: 2020
     }
 }
 
