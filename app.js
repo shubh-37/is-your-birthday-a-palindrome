@@ -17,7 +17,34 @@ function isPalindrome(str){
     }
 }
 
+function dateToStr(date){
+    var dateToStr = {
+        day : "",
+        month : "",
+        year : ""
+    }
+
+    if(date.day < 10){
+        dateToStr.day = "0" + date.day;
+    }else{
+        dateToStr.day = date.day.toString();
+    }
+    if(date.month < 10){
+        dateToStr.month = "0" + date.month;
+    }else{
+        dateToStr.month = date.month.toString();
+    }
+    dateToStr.year = date.year.toString();
+
+    return dateToStr;
+}
+
 function clickHandler(){
+    var date = {
+        day: 23,
+        month: 12,
+        year: 2020
+    }
 }
 
 checkBtn.addEventListener("click",clickHandler);
