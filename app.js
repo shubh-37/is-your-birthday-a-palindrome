@@ -160,14 +160,17 @@ function clickHandler(){
 
     if(isPalindrome){
         //rendering the output
+        output.style.display = "block";
         output.innerText = "Yay! your birthday is a Palindrome🥳";
     }else{
         //processing the input as well as rendering the output
         var [nextDay, counter] = getNextPalindromeDate(date);
+        output.style.display = "block";
         output.innerText = `The next palindrome date is ${nextDay.day}-${nextDay.month}-${nextDay.year} and you missed it by ${counter} days 😔`;
     }
     }else{
         //error handler
+        output.style.display = "block";
         output.innerText = "Please enter a date to check!!"
     }
     
