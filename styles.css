@@ -1,0 +1,85 @@
+:root{
+    --backgroud-color: #171717;
+    --text-color: #a3e635;
+}
+body{
+    margin: 0px;
+    background-color: var(--backgroud-color);
+    color: var(--text-color);
+}
+
+.page-container{
+    position: relative;
+    min-height: 100vh;   
+}
+
+.container{
+    display: block;
+    margin: auto;
+    border: 1px solid;
+    width: 60%;
+    margin-top: 1rem;
+}
+
+h1{
+    text-align: center;
+}
+
+.input-date{
+    display: block;
+    margin: auto;
+    background-color: var(--backgroud-color);
+    color: var(--text-color);
+    width: 35%;
+}
+
+#check-btn{
+    display: block;
+    cursor: pointer;
+    margin: auto;
+    margin-top: 1rem;
+    background-color: var(--backgroud-color);
+    color: var(--text-color);
+    margin-bottom: 1rem;
+    border-radius: 0.2rem;
+    width: 20%;
+}
+
+.output{
+    border: 1px solid;
+    margin: 0.7rem;
+    padding: 0.5rem;
+    display: none;
+}
+
+.footer{
+    position: fixed;
+    bottom: 0;
+    background-color: var(--backgroud-color);
+    color: var(--text-color);
+    border: 1px solid;
+    width: 100%;
+    text-align: center;
+    border-radius: 1rem 1rem 0rem 0rem;
+}
+
+.footer-heading{
+    font-size: larger;
+    font-weight: bold;
+    display: inline-block;
+    padding-top: 1rem;
+}
+.list-non-bullet{
+    list-style: none;
+}
+
+.link{
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.list-item-inline{
+    display: inline;
+    padding: 1rem;
+    padding-inline-start: 0.2rem;
+}
